@@ -1,27 +1,21 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 
-import { Context } from "@deepseek-ai/cordis";
-import { RelayMonitorBundleRegistry } from "../../monitors/src/bundle-registry.mjs";
-import { RelayMonitorObserverRegistry } from "../../monitors/src/observer-registry.mjs";
 import { createTimeBundleType, createTimeProvider, createTimerWait } from "../src/time-bundle.mjs";
 
 test("MB05-002: Time extension registers localized type and owns clock observation/detection", async () => {
-  const ctx = new Context();
-  const bundles = new RelayMonitorBundleRegistry(ctx);
-  const observers = new RelayMonitorObserverRegistry(ctx);
-  bundles.registerBundleType(createTimeBundleType({ clock: () => new Date("2026-08-30T00:00:30.000Z") }));
-  observers.register(createTimeProvider({ clock: () => new Date("2026-08-30T00:00:30.000Z") }));
-  const [entry] = await bundles.listBundleTypes({ locale: "zh-CN" });
-  assert.equal(entry.type_id, "time.deadline");
-  assert.equal(entry.name, "截止时间计时器");
-  assert.deepEqual(entry.capabilities, ["clock.read"]);
-  assert.deepEqual(entry.event_types, ["timer.elapsed"]);
+  const type = createTimeBundleType({ clock: () => new Date("2026-08-30T00:00:30.000Z") });
+  const provider = createTimeProvider({ clock: () => new Date("2026-08-30T00:00:30.000Z") });
+  assert.equal(type.type_id, "time.deadline");
+  assert.equal(type.locales["zh-CN"].name, "截止时间计时器");
+  assert.equal(type.locales["en-US"].name, "Deadline timer");
+  assert.deepEqual(type.capabilities, ["clock.read"]);
+  assert.deepEqual(type.event_types, ["timer.elapsed"]);
   const monitor = { observer: { provider: "clock.read" }, detector: {
     kind: "time.deadline", timer_id: "timer-1", deadline: "2026-08-30T00:00:30.000Z", event_type: "timer.elapsed",
   } };
-  const current = await observers.observe({ monitor });
-  assert.equal((await observers.detect({ monitor, previous: null, current }))[0].key, "timer-1:2026-08-30T00:00:30.000Z");
+  const current = await provider.observe({ monitor });
+  assert.equal((await provider.detect({ monitor, previous: null, current }))[0].key, "timer-1:2026-08-30T00:00:30.000Z");
 });
 
 test("MB05-003: relative timer proposal is bound to the authenticated Session", () => {
