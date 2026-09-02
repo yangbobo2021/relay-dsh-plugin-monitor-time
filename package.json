@@ -2,9 +2,24 @@
   "name": "relay-dsh-plugin-monitor-time",
   "version": "0.1.0",
   "description": "Time deadline Monitor Bundle extension for Relay on DeepSeek Harness.",
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "monitoring",
+    "monitor-bundles",
+    "timer"
+  ],
   "license": "MIT",
   "type": "module",
   "main": "./host-plugin.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yangbobo2021/relay-dsh-plugin-monitor-time.git"
+  },
+  "homepage": "https://github.com/yangbobo2021/relay-dsh-plugin-monitor-time#readme",
+  "bugs": {
+    "url": "https://github.com/yangbobo2021/relay-dsh-plugin-monitor-time/issues"
+  },
   "exports": {
     ".": "./host-plugin.js",
     "./package.json": "./package.json"
@@ -12,6 +27,7 @@
   "files": [
     "README.md",
     "README.zh.md",
+    "CHANGELOG.md",
     "SPEC.md",
     "docs",
     "cordis.patch.yml",
@@ -20,6 +36,7 @@
     "src"
   ],
   "engines": { "node": ">=22.13" },
+  "publishConfig": { "access": "public", "tag": "latest" },
   "dsh": { "bundle": { "patch": "./cordis.patch.yml" } },
   "scripts": {
     "typecheck": "node --check host-plugin.js && node --check agent-bridge.js && node --check src/time-bundle.mjs",
@@ -38,5 +55,8 @@
     "@deepseek-ai/dsh-tools": { "optional": true },
     "relay-dsh-plugin-events": { "optional": true },
     "relay-dsh-plugin-monitors": { "optional": true }
+  },
+  "devDependencies": {
+    "@deepseek-ai/dsh-tools": "0.1.2-alpha.3"
   }
 }
