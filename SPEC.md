@@ -1,6 +1,6 @@
 # Relay Time Monitor Bundle Extension Specification
 
-Status: normative for `0.1.0`
+Status: normative for `0.1.1`
 
 This independently installable extension owns the `time.deadline` Bundle Type,
 `clock.read` trusted Observer/Detector provider, `timer.elapsed` Event proposal, and
@@ -22,5 +22,5 @@ Both `relay_schedule_timer` and Core's generic
 instantiation path before Events performs baseline and atomic commit.
 
 The public package, GitHub tag, and npm version must all identify the same immutable
-`0.1.0` artifact. A release tag is accepted only when it exactly matches the package
+`0.1.1` artifact. A release tag is accepted only when it exactly matches the package
 version and the tagged commit is contained in `main`.

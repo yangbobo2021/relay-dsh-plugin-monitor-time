@@ -6,7 +6,7 @@ export function createTimeBundleType({ clock = () => new Date(), idFactory = ran
     api_version: 1,
     type_id: "time.deadline",
     bundle_version: 1,
-    origin: { kind: "plugin", plugin_id: "relay-monitor-time", plugin_version: "0.1.0" },
+    origin: { kind: "plugin", plugin_id: "relay-monitor-time", plugin_version: "0.1.1" },
     event_types: ["timer.elapsed"],
     parameter_schema: {
       type: "object",
@@ -135,7 +135,7 @@ export function createTimerWait({
         type_id: "time.deadline",
         bundle_version: 1,
         plugin_id: "relay-monitor-time",
-        plugin_version: "0.1.0",
+        plugin_version: "0.1.1",
       },
     }],
     timer: { timer_id: timerId, wait_id: waitId, deadline, intent: resolved.intent },

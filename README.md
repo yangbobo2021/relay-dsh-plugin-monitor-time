@@ -14,17 +14,19 @@ Simplified Chinese catalog metadata.
 Install the exact public release with the required Relay plugins:
 
 ```bash
-npx @deepseek-ai/dsh@0.1.2-alpha.3 plugin --profile web add --save-exact \
-  relay-dsh-plugin-events@0.2.1 \
-  relay-dsh-plugin-monitors@0.3.0 \
-  relay-dsh-plugin-monitor-time@0.1.0
+npx @deepseek-ai/dsh@0.1.2-rc.1 plugin --profile web add --save-exact \
+  relay-dsh-plugin-events@0.2.2 \
+  relay-dsh-plugin-monitors@0.3.1 \
+  relay-dsh-plugin-monitor-time@0.1.1
 ```
 
 Git source is also installable for release verification:
 
 ```bash
-npx @deepseek-ai/dsh@0.1.2-alpha.3 plugin --profile web add --save-exact \
-  github:yangbobo2021/relay-dsh-plugin-monitor-time#v0.1.0
+npx @deepseek-ai/dsh@0.1.2-rc.1 plugin --profile web add --save-exact \
+  github:yangbobo2021/relay-dsh-plugin-monitor-time#v0.1.1
 ```
+
+The same artifact retains compatibility with audited DSH `0.1.2-alpha.3` profiles.
 
 See [SPEC.md](SPEC.md) and [delivery scenarios](docs/acceptance-scenarios.md).
