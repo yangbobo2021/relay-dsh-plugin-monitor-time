@@ -11,4 +11,4 @@
 | MB05-007 | Migration | Pre-platform timers retain identity, Wait, continuation, baseline, and deadline. | migration fixture |
 | MB05-008 | Uninstall UI | Catalog/tool disappear while history remains understandable in both locales. | browser |
 | MB05-009 | Standalone repository | Clean clone installs from its own lockfile; no test or runtime import crosses into Relay. | fresh `npm ci` + boundary scan |
-| MB05-010 | Public release | GitHub `v0.1.0`, npm `0.1.0`, repository metadata, packed integrity, and `latest` resolve to one release. | CI + registry query + fresh DSH profile |
+| MB05-010 | Public release | GitHub `v0.1.1`, npm `0.1.1`, repository metadata, packed integrity, and `latest` resolve to one release. | CI + registry query + fresh DSH profile |

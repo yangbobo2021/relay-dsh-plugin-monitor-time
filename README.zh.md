@@ -13,17 +13,19 @@
 使用公开正式版本安装，并同时安装所需的 Relay 插件：
 
 ```bash
-npx @deepseek-ai/dsh@0.1.2-alpha.3 plugin --profile web add --save-exact \
-  relay-dsh-plugin-events@0.2.1 \
-  relay-dsh-plugin-monitors@0.3.0 \
-  relay-dsh-plugin-monitor-time@0.1.0
+npx @deepseek-ai/dsh@0.1.2-rc.1 plugin --profile web add --save-exact \
+  relay-dsh-plugin-events@0.2.2 \
+  relay-dsh-plugin-monitors@0.3.1 \
+  relay-dsh-plugin-monitor-time@0.1.1
 ```
 
 也可以使用固定 Git 标签验证安装：
 
 ```bash
-npx @deepseek-ai/dsh@0.1.2-alpha.3 plugin --profile web add --save-exact \
-  github:yangbobo2021/relay-dsh-plugin-monitor-time#v0.1.0
+npx @deepseek-ai/dsh@0.1.2-rc.1 plugin --profile web add --save-exact \
+  github:yangbobo2021/relay-dsh-plugin-monitor-time#v0.1.1
 ```
+
+同一制品继续兼容已审计的 DSH `0.1.2-alpha.3` Profile。
 
 详见 [SPEC.md](SPEC.md) 和[交付验收场景](docs/acceptance-scenarios.md)。
