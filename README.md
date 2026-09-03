@@ -15,16 +15,16 @@ Install the exact public release with the required Relay plugins:
 
 ```bash
 npx @deepseek-ai/dsh@0.1.2-rc.1 plugin --profile web add --save-exact \
-  relay-dsh-plugin-events@0.2.2 \
-  relay-dsh-plugin-monitors@0.3.1 \
-  relay-dsh-plugin-monitor-time@0.1.1
+  relay-dsh-plugin-events@0.2.3-rc.1 \
+  relay-dsh-plugin-monitors@0.3.2-rc.1 \
+  relay-dsh-plugin-monitor-time@0.1.2-rc.1
 ```
 
 Git source is also installable for release verification:
 
 ```bash
 npx @deepseek-ai/dsh@0.1.2-rc.1 plugin --profile web add --save-exact \
-  github:yangbobo2021/relay-dsh-plugin-monitor-time#v0.1.1
+  github:yangbobo2021/relay-dsh-plugin-monitor-time#v0.1.2-rc.1
 ```
 
 The same artifact retains compatibility with audited DSH `0.1.2-alpha.3` profiles.
