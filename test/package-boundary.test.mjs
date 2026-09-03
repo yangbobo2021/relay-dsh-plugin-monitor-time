@@ -13,8 +13,8 @@ test("MB05-001/002: Time is independently packable and imports only public Relay
   assert.equal(manifest.name, "relay-dsh-plugin-monitor-time");
   assert.equal(manifest.repository.url, "git+https://github.com/yangbobo2021/relay-dsh-plugin-monitor-time.git");
   assert.equal(manifest.publishConfig.access, "public");
-  assert.equal(manifest.peerDependencies["relay-dsh-plugin-events"], "0.2.2");
-  assert.equal(manifest.peerDependencies["relay-dsh-plugin-monitors"], "0.3.1");
+  assert.equal(manifest.peerDependencies["relay-dsh-plugin-events"], "0.2.3-rc.1");
+  assert.equal(manifest.peerDependencies["relay-dsh-plugin-monitors"], "0.3.2-rc.1");
   assert.match(host, /relayMonitorBundles/u);
   assert.match(host, /relayMonitorObservers/u);
   assert.doesNotMatch(host, /\.\.\/monitors|\.\.\/events|SQLite|RelayStore/u);
