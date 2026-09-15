@@ -1,5 +1,9 @@
 # Relay Time Monitor Bundle for DeepSeek Harness
 
+> **Release candidate `0.1.2-rc.2` is verified on official DSH `0.1.5-rc.2`
+> and `0.1.6-alpha.1`.** No implementation adaptation was required; its peer
+> metadata declares both exact releases.
+
 [![npm version](https://img.shields.io/npm/v/relay-dsh-plugin-monitor-time?label=npm)](https://www.npmjs.com/package/relay-dsh-plugin-monitor-time)
 [![CI](https://github.com/yangbobo2021/relay-dsh-plugin-monitor-time/actions/workflows/ci.yml/badge.svg)](https://github.com/yangbobo2021/relay-dsh-plugin-monitor-time/actions/workflows/ci.yml)
 [![MIT license](https://img.shields.io/github/license/yangbobo2021/relay-dsh-plugin-monitor-time)](LICENSE)
